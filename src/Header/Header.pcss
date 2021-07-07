@@ -1,0 +1,33 @@
+.nav__container {
+  background-color: #dedede;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 15px;
+
+  a {
+    padding: 10px;
+    text-decoration: none;
+  }
+}
+.nav__link {
+  padding: 10px;
+  text-decoration: none;
+}
+.active-page {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: blue;
+  color: white;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+  .nav__container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
