@@ -16,7 +16,15 @@ const config = {
   },
   devServer: {
     open: true,
-    host: "localhost",
+    compress: false,
+    /**
+     * https://dev.to/ku6ryo/run-webpackdevserver-in-docker-1mg5
+     * By default, the dev server runs for 127.0.0.1 to enable accessing by localshot:XXXX on browsers.
+     * But this does not expose the content outside of a Docker container.
+     * You need to listen 0.0.0.0
+     */
+    host: "0.0.0.0",
+    port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({
